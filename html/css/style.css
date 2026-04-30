@@ -1,4 +1,19 @@
 /* ======================================================
+   ANIMAÇÃO GLOBAL AO SCROLL
+====================================================== */
+
+.fade-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.fade-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ======================================================
    RESET GLOBAL
 ====================================================== */
 * {
@@ -15,7 +30,7 @@ body {
 }
 
 /* ======================================================
-   HEADER (FUNCIONA PARA TODAS AS PÁGINAS)
+   HEADER
 ====================================================== */
 .header,
 header {
@@ -44,7 +59,7 @@ header::after {
     transparent
   );
   transform: skewX(-20deg);
-  animation: shine 6s infinite;
+  animation: shine 6s infinite linear;
 }
 
 @keyframes shine {
@@ -78,7 +93,7 @@ header::after {
 }
 
 /* ======================================================
-   MENU (FUNCIONA EM TODAS)
+   MENU
 ====================================================== */
 .menu,
 nav {
@@ -105,7 +120,7 @@ nav a:hover {
 }
 
 /* ======================================================
-   CONTEÚDO PADRÃO
+   CONTEÚDO
 ====================================================== */
 .conteudo,
 section {
@@ -134,7 +149,7 @@ section {
 }
 
 /* ======================================================
-   CARDS (FUNCIONA PARA TODOS)
+   CARDS
 ====================================================== */
 .card {
   background: #fff;
@@ -156,7 +171,7 @@ section {
 }
 
 /* ======================================================
-   GRID (EMPRESA + AGRO)
+   GRID
 ====================================================== */
 .cards-container,
 .fazendas-container {
@@ -192,7 +207,7 @@ section {
 }
 
 /* ======================================================
-   IMAGENS (EMPRESA)
+   IMAGENS
 ====================================================== */
 .card-img img {
   width: 100%;
@@ -202,7 +217,7 @@ section {
 }
 
 /* ======================================================
-   HERO (EMPRESA)
+   HERO
 ====================================================== */
 .hero {
   height: 60vh;
@@ -262,7 +277,6 @@ footer {
   .title {
     font-size: 2.2rem;
   }
-
   .hero h2 {
     font-size: 2rem;
   }
