@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>São Paulo Futebol Clube</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- ===========================
+          HEADER
+    ============================ -->
+    <header class="header fade-scroll">
+      <div class="title-box">
+        <h1 class="title">São Paulo Futebol Clube</h1>
+        <p class="subtitle">O Maior do Brasil</p>
+      </div>
+
+      <!-- MENU -->
+      <nav class="menu">
+        <a href="index.html" class="btn">Início</a>
+        <a href="iftl.html" class="btn">Irmãos Franco</a>
+        <a href="if.agro.html" class="btn">Fazendas</a>
+        <a href="spfc.html" class="btn">SPFC</a>
+      </nav>
+    </header>
+
+    <!-- ===========================
+          SEÇÃO HISTÓRIA
+    ============================ -->
+    <section id="historia" class="secao fade-scroll">
+      <div class="section-title">
+        <h1>História do SPFC</h1>
+        <p>Fundado em 1930, um dos clubes mais vitoriosos do Brasil.</p>
+      </div>
+
+      <div class="card">
+        <h2>Início</h2>
+        <p>
+          O São Paulo começou sua trajetória como um clube inovador e se tornou
+          referência no futebol brasileiro e mundial.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Reconstrução</h2>
+        <p>
+          Após dificuldades, o clube ressurgiu forte e competitivo, consolidando
+          sua grandeza.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===========================
+          SEÇÃO ÍDOLOS
+    ============================ -->
+    <section id="idolos" class="secao fade-scroll">
+      <div class="section-title">
+        <h1>Ídolos Históricos</h1>
+        <p>Jogadores que marcaram o clube.</p>
+      </div>
+
+      <div class="cards-container">
+        <!-- Rogério Ceni -->
+        <div class="card">
+          <img
+            src="https://lncimg.lance.com.br/uploads/2015/12/15/56706b093c41e.jpeg"
+            alt="Rogério Ceni"
+          />
+          <h3>Rogério Ceni</h3>
+          <p>Maior ídolo do SPFC e maior goleiro artilheiro da história.</p>
+        </div>
+
+        <!-- Raí (com foto atualizada) -->
+        <div class="card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP04qSwo9We30jbyqbDp8pfMg4YfRkkmT4Fw&s"
+          />
+          <h3>Raí</h3>
+          <p>O Maestro das Libertadores e Mundial de 1992.</p>
+        </div>
+
+        <!-- Lugano -->
+        <div class="card">
+          <img
+            src="https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2020%2F0520%2Fr700648_1296x729_16%2D9.jpg&w=570&format=jpg"
+            alt="Lugano"
+          />
+          <h3>Diego Lugano</h3>
+          <p>Um dos maiores líderes da história do clube.</p>
+        </div>
+
+        <!-- Cafu -->
+        <div class="card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/af/Cafu_WC2006.jpg"
+            alt="Cafu"
+          />
+          <h3>Cafu</h3>
+          <p>Revelado pelo SPFC, campeão mundial com o Brasil.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+          SEÇÃO TÍTULOS
+    ============================ -->
+    <section id="titulos" class="secao fade-scroll">
+      <div class="section-title">
+        <h1>Títulos Importantes</h1>
+      </div>
+
+      <div class="card">
+        <h2>Mundial de Clubes</h2>
+        <p>1992, 1993 e 2005</p>
+      </div>
+
+      <div class="card">
+        <h2>Copa Libertadores</h2>
+        <p>1992, 1993 e 2005</p>
+      </div>
+
+      <div class="card">
+        <h2>Campeonato Brasileiro</h2>
+        <p>1977, 1986, 1991, 2006, 2007 e 2008</p>
+      </div>
+    </section>
+
+    <!-- ===========================
+          SEÇÃO ESTÁDIO
+    ============================ -->
+    <section id="estadio" class="secao fade-scroll">
+      <div class="section-title">
+        <h1>Estádio do Morumbi</h1>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Est%C3%A1dio_do_Morumbi_-%28SPFC%29.jpg"
+          alt="Morumbi"
+          class="card-img"
+        />
+        <h2>Templo Sagrado</h2>
+        <p>
+          Inaugurado em 1960, é um dos maiores estádios do Brasil e casa do
+          Tricolor Paulista.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===========================
+          FOOTER
+    ============================ -->
+    <footer class="footer">
+      <p>Site desenvolvido por Leonardo Franco — 2026</p>
+      <p>Todos os direitos reservados ao São Paulo Futebol Clube</p>
+    </footer>
+
+    <!-- Script de animação -->
+    <script>
+      const faders = document.querySelectorAll(".fade-scroll");
+
+      function aparecer() {
+        const gatilho = window.innerHeight * 0.85;
+
+        faders.forEach((item) => {
+          const topo = item.getBoundingClientRect().top;
+
+          if (topo < gatilho) {
+            item.classList.add("show");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", aparecer);
+      aparecer();
+    </script>
+  </body>
+</html>
