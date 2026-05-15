@@ -1,7 +1,6 @@
 /* ======================================================
    SEU CSS — ANIMAÇÃO GLOBAL AO SCROLL
 ====================================================== */
-
 .fade-scroll {
   opacity: 0;
   transform: translateY(40px);
@@ -149,7 +148,7 @@ section {
 }
 
 /* ======================================================
-   CARDS
+   CARDS GERAIS
 ====================================================== */
 .card {
   background: #fff;
@@ -171,13 +170,56 @@ section {
 }
 
 /* ======================================================
-   GRID
+   GRID GERAL
 ====================================================== */
 .cards-container,
 .fazendas-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
+}
+
+/* ======================================================
+   SPFC – CARDS EM FILEIRA
+====================================================== */
+.cards-container.spfc {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.cards-container.spfc .card {
+  width: 160px;
+  flex: 0 0 auto;
+  padding: 12px;
+  text-align: center;
+}
+
+.cards-container.spfc .card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cards-container.spfc .card h3 {
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .cards-container.spfc .card {
+    width: 130px;
+  }
+
+  .cards-container.spfc .card img {
+    height: 130px;
+  }
 }
 
 /* ======================================================
@@ -207,7 +249,7 @@ section {
 }
 
 /* ======================================================
-   IMAGENS
+   IMAGENS PADRÃO
 ====================================================== */
 .card-img img {
   width: 100%;
@@ -283,9 +325,8 @@ footer {
 }
 
 /* ======================================================
-   CSS DA PÁGINA ORIGINAL DO SÃO PAULO FC
+   CSS ORIGINAL SPFC (mantido)
 ====================================================== */
-
 body {
   background-color: #f4f4f4;
   color: #222;
@@ -332,20 +373,8 @@ body {
 }
 
 /* CARDS DE ÍDOLOS */
-.cards-container {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card {
-  background: white;
-  border-radius: 10px;
-  width: 220px;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+.cards-container.spfc .card {
+  width: 160px;
 }
 
 .card img {
@@ -355,12 +384,15 @@ body {
 
 .card h3 {
   margin-top: 10px;
+  color: #d10000;
 }
 
 /* ESTÁDIO */
 .estadio-img {
-  width: 100%;
+  width: 80%;
+  max-width: 550px;
   margin-top: 20px;
+  display: block;
   border-radius: 10px;
 }
 
